@@ -210,7 +210,7 @@ function getReviewByRating(arr, userRating) {
       ratingArray.push(arr[i])
     }
   }
-  console.log(ratingArray)
+  return ratingArray
 }
 
 
@@ -234,7 +234,7 @@ function getLongReviews(arr) {
       longReviews.push(arr[i])
     }
   }
-  console.log(longReviews)
+  return longReviews
 }
 
 
@@ -257,7 +257,7 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker( /* code here */ ) {
+function carMaker(odometerReading) {
   /* code here */
 
 }

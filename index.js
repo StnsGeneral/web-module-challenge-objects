@@ -203,8 +203,35 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
-function getReviewByRating( /* code here */ ) {
-  /* code here */
+// function getReviewByRating(arr, userRating) {
+//   let ratingArray = []
+//   arr.forEach(obj => {
+//       for (rating in obj) {
+//         if (arr[obj].rating === userRating) {
+//           ratingArray.push(arr[obj])
+//         }
+//       }
+//       //   if (arr[obj].rating === userRating) {
+//       //     ratingArray.push(arr[obj])
+//       //   }
+//       // });
+//       // console.log(ratingArray)
+
+//     }
+//     console.log(ratingArray)
+//   }
+//   getReviewByRating(reviews, 4)
+
+function getReviewByRating(arr, userRating) {
+  let ratingArray = []
+  arr.forEach(obj => {
+    for (const rating in obj) {
+      if (rating === userRating) {
+        ratingArray.push(arr[obj])
+      }
+    }
+  })
+  console.log(ratingArray)
 }
 
 

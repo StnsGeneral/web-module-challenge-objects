@@ -203,34 +203,13 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
-// function getReviewByRating(arr, userRating) {
-//   let ratingArray = []
-//   arr.forEach(obj => {
-//       for (rating in obj) {
-//         if (arr[obj].rating === userRating) {
-//           ratingArray.push(arr[obj])
-//         }
-//       }
-//       //   if (arr[obj].rating === userRating) {
-//       //     ratingArray.push(arr[obj])
-//       //   }
-//       // });
-//       // console.log(ratingArray)
-
-//     }
-//     console.log(ratingArray)
-//   }
-//   getReviewByRating(reviews, 4)
-
 function getReviewByRating(arr, userRating) {
   let ratingArray = []
-  arr.forEach(obj => {
-    for (const rating in obj) {
-      if (rating === userRating) {
-        ratingArray.push(arr[obj])
-      }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].rating >= Math.floor(userRating) && arr[i].rating < Math.floor(userRating + 1)) {
+      ratingArray.push(arr[i])
     }
-  })
+  }
   console.log(ratingArray)
 }
 
@@ -248,9 +227,16 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews( /* code here */ ) {
-  /* code here */
+function getLongReviews(arr) {
+  let longReviews = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].feedback.split(" ").length > 15) {
+      longReviews.push(arr[i])
+    }
+  }
+  console.log(longReviews)
 }
+
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 

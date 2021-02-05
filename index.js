@@ -258,8 +258,13 @@ Use the carMaker function below to do the following:
 
 
 function carMaker(odometerReading) {
-  /* code here */
-
+  const car = {
+    odometer: odometerReading,
+    drive: function (odoIncrease) {
+      this.odometer = this.odometer + odoIncrease
+    }
+  }
+  return car
 }
 
 
